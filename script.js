@@ -21,3 +21,17 @@ function pegarValores(){
     vet[3] = oct.value;
     return vet;
 }
+
+//valida se tem somente um valor inserido 
+function somenteUm(vet){
+    var contador = 0;
+    for(var i = 0; i < vet.length; i++){
+        if (vet[i] != 0) {
+            contador++;
+        }
+    }
+    if(contador>1){
+        alert("Insira o Número em Apenas um Campo!");
+        limpar();
+    }
+}
