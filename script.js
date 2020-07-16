@@ -35,3 +35,24 @@ function somenteUm(vet){
         limpar();
     }
 }
+
+//main
+document.getElementById('converter').onclick = function(){
+    somenteUm(pegarValores());
+}
+
+//execulta a função limpar, que remove os valores dos inputs
+document.getElementById('limpar').onclick = function(){
+    limpar();
+}
+
+//valida se o input binario está recebendo 0 ou 1
+document.getElementById('binario').onkeypress = function(){
+    var aux = event.which;
+    if((aux == 48 || aux == 49)){
+        return true;
+    }else{
+        alert("Somente Binário!");
+        return false;
+    }
+}
